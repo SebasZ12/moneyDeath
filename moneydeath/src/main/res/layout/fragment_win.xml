@@ -1,14 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".WinFragment">
+    tools:context="com.example.android.navigation.WinFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <data>
+
+        <variable
+            name="win"
+            type="com.example.moneydeath.WinFragment" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="you fucking made it g" />
+        android:layout_height="match_parent">
 
-</FrameLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="you fucking made it g" />
+
+        <TextView
+            android:id="@+id/death_win_fragment_points_gained"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@{win.pointsGained}" />
+
+        <TextView
+            android:id="@+id/death_win_fragment_total_points"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@{win.totalPoints}" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

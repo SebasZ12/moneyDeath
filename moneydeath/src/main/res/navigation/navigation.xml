@@ -18,13 +18,18 @@
         android:id="@+id/gameFragment"
         android:name="com.example.moneydeath.GameFragment"
         android:label="fragment_game"
-        tools:layout="@layout/fragment_game" >
+        tools:layout="@layout/fragment_game">
         <action
             android:id="@+id/action_gameFragment_to_deathFragment"
             app:destination="@id/deathFragment" />
         <action
             android:id="@+id/action_gameFragment_to_winFragment"
-            app:destination="@id/winFragment" />
+            app:destination="@id/winFragment" >
+            <argument
+                android:name="pointsGained"
+                android:defaultValue="1"
+                app:argType="integer" />
+        </action>
     </fragment>
     <fragment
         android:id="@+id/deathFragment"

@@ -8,6 +8,7 @@ import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.constraintlayout.widget.ConstraintSet
 import androidx.core.content.ContextCompat
+import androidx.core.os.bundleOf
 import androidx.navigation.findNavController
 
 @SuppressLint("ViewConstructor")
@@ -51,6 +52,7 @@ class GameOptionComponent(val fragment: GameFragment, context: Context, attrs: A
     }
 
     private fun setActionButton(responseOption: ResponseOption) {
+        val bundle = bundleOf(WinFragment.AMOUNT_POINTS_GAINED to 100)
         buttonOptionText.setOnClickListener {
             if(responseOption.optionAction == ResponseOption.WIN_ACTION) {
 
@@ -59,10 +61,10 @@ class GameOptionComponent(val fragment: GameFragment, context: Context, attrs: A
                     fragment.setOptions()
                     fragment.binding.invalidateAll()
                 } else {
-                    fragment.view?.findNavController()?.navigate(GameFragmentDirections.actionGameFragmentToWinFragment())
+                    fragment.view?.findNavController()?.navigate(R.id.action_gameFragment_to_winFragment, bundle)
                 }
             } else {
-                fragment.view?.findNavController()?.navigate(GameFragmentDirections.actionGameFragmentToDeathFragment())
+                fragment.view?.findNavController()?.navigate(R.id.action_gameFragment_to_deathFragment)
             }
         }
     }
