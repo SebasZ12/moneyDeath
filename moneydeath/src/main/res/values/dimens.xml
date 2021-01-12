@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Game Option Component-->
+    <dimen name="death_option_button_margin_start">5dp</dimen>
+    <dimen name="vpp_tooltip_content_margin_top">5dp</dimen>
+    <dimen name="vpp_tooltip_close_icon_click_area_size">50dp</dimen>
+</resources>
