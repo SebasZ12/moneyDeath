@@ -10,8 +10,8 @@ import com.example.moneydeath.databinding.FragmentWinBinding
 
 class WinFragment : Fragment() {
 
-    var pointsGained: Int? = null
-    var totalPoints: Int? = null
+    var pointsGained: Int? = 1
+    var totalPoints: Int? = 1
     lateinit var binding: FragmentWinBinding
 
     override fun onCreateView(

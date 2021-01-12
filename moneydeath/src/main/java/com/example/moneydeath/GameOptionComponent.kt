@@ -64,10 +64,10 @@ class GameOptionComponent(val fragment: GameFragment, context: Context, attrs: A
                     fragment.setOptions()
                     fragment.binding.invalidateAll()
                 } else {
-                    fragment.view?.findNavController()?.navigate(R.id.action_gameFragment_to_winFragment, bundle)
+                    fragment.view?.findNavController()?.navigate(R.id.action_gameFragment_to_deathFragment, bundle)
                 }
             } else {
-                fragment.view?.findNavController()?.navigate(R.id.action_gameFragment_to_deathFragment)
+                fragment.view?.findNavController()?.navigate(R.id.action_gameFragment_to_winFragment)
             }
         }
     }
