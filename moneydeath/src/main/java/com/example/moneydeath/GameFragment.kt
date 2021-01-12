@@ -21,17 +21,17 @@ class GameFragment : Fragment() {
     // resources so we could internationalize. (or better yet, not define the questions in code...)
     private val questions: MutableList<Question> = mutableListOf(
         Question(text = "Do you really need this?",
-            options = listOf(ResponseOption("yes", ResponseOption.WIN_ACTION), ResponseOption("no", ResponseOption.LOSE_ACTION))),
+            options = listOf(ResponseOption("yes", ResponseOption.LOSE_ACTION), ResponseOption("no", ResponseOption.WIN_ACTION))),
         Question(text = "for real?",
-            options = listOf(ResponseOption("yeah", ResponseOption.WIN_ACTION),ResponseOption("nah", ResponseOption.LOSE_ACTION))),
+            options = listOf(ResponseOption("yeah", ResponseOption.LOSE_ACTION),ResponseOption("nah", ResponseOption.WIN_ACTION))),
         Question(text = "k g, so can you afford it?",
-            options = listOf(ResponseOption("fo sure", ResponseOption.WIN_ACTION),ResponseOption("nop", ResponseOption.LOSE_ACTION))),
+            options = listOf(ResponseOption("fo sure", ResponseOption.LOSE_ACTION),ResponseOption("nop", ResponseOption.WIN_ACTION))),
         Question(text = "will you get in a ton of debt for this?",
-            options = listOf(ResponseOption("nop", ResponseOption.WIN_ACTION), ResponseOption("yes.", ResponseOption.LOSE_ACTION))),
+            options = listOf(ResponseOption("nop", ResponseOption.LOSE_ACTION), ResponseOption("yes.", ResponseOption.WIN_ACTION))),
         Question(text = "It will pay itself with time?",
-            options = listOf(ResponseOption("yass", ResponseOption.WIN_ACTION), ResponseOption("nou", ResponseOption.LOSE_ACTION))),
+            options = listOf(ResponseOption("yass", ResponseOption.LOSE_ACTION), ResponseOption("nou", ResponseOption.WIN_ACTION))),
         Question(text = "again.. it is necessary?",
-            options = listOf(ResponseOption("YESSS", ResponseOption.WIN_ACTION), ResponseOption("k no", ResponseOption.LOSE_ACTION)))
+            options = listOf(ResponseOption("YESSS", ResponseOption.LOSE_ACTION), ResponseOption("k no", ResponseOption.WIN_ACTION)))
     )
 
     lateinit var currentQuestion: Question
